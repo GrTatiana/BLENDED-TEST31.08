@@ -37,9 +37,11 @@ export const Header = () => {
           </nav>
         </div>
       </header>
-      <Suspense fallback={null}>
-        <Outlet />
-      </Suspense>
+      <main>
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </main>
     </>
   );
 };
