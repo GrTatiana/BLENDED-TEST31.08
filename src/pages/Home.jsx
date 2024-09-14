@@ -1,7 +1,16 @@
 import { Container, ExchangeForm, Heading, Section } from 'components';
+import { useSelector } from 'react-redux';
+import { selectError, selectExchangeInfo, selectIsLoading } from '../redux/selectors';
 
 const Home = () => {
-  const isError = false;
+  const isError = useSelector(selectError);
+  const isLoading = useSelector(selectIsLoading);
+  const exchangeInfo = useSelector(selectExchangeInfo);
+  console.log(exchangeInfo)
+
+
+
+
 
   return (
     <Section>
